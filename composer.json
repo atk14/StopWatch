@@ -1,0 +1,23 @@
+{
+        "name": "atk14/stop-watch",
+        "type": "library",
+        "description": "StopWatch is a PHP class for precise time measurement. This package is part of the ATK14 Framework.",
+        "keywords": ["string"],
+        "homepage": "https://github.com/atk14/StopWatch",
+        "license": ["MIT"],
+        "authors": [
+                {
+                        "name": "Jaromir Tomek",
+                        "homepage": "https://github.com/yarri"
+                }
+        ],
+        "require": {
+                "php": ">=5.3.0"
+        },
+        "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+        },
+        "autoload": {
+                "classmap": ["src"]
+        }
+}
