@@ -33,6 +33,7 @@ jobs:
         - sudo apt update
         - sudo apt install php8.2
         - php -v
+        - sudo apt install libonig5
     - name: "PHP: 8.3"
       dist: jammy
       language: ruby # This makes no sence to me, but it works!
@@ -42,6 +43,7 @@ jobs:
         - sudo apt update
         - sudo apt install php8.3
         - php -v
+        - sudo apt install libonig5
     - name: "PHP: 8.4"
       dist: jammy
       language: ruby # This makes no sence to me, but it works!
@@ -51,6 +53,7 @@ jobs:
         - sudo apt update
         - sudo apt install php8.4
         - php -v
+        - sudo apt install libonig5
     - name: "PHP: 8.5"
       dist: jammy
       language: ruby # This makes no sence to me, but it works!
@@ -60,9 +63,10 @@ jobs:
         - sudo apt update
         - sudo apt install php8.5
         - php -v
+        - sudo apt install libonig5
 
 before_script:
-  - composer update --dev
+  - composer update --dev 2>&1
 
 script:
   - cd test && wget -q https://raw.github.com/atk14/Atk14/master/src/scripts/run_unit_tests && chmod +x run_unit_tests && ./run_unit_tests
